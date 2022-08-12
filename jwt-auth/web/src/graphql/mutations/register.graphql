@@ -1,0 +1,3 @@
+mutation CreateAccount($password: String!, $email: String!) {
+  createAccount(password: $password, email: $email)
+}

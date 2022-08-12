@@ -1,0 +1,29 @@
+{
+  "name": "testing2",
+  "version": "0.1.0",
+  "description": "lol",
+  "action": {
+    "default_title": "testing",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3,
+
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "jquery.js",
+        "popper.min.js",
+        "bootstrap.min.js",
+        "contentScript.js"
+      ],
+      "css": ["bootstrap.min.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "tabs"]
+}
